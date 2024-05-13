@@ -1,10 +1,10 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, Text, StyleSheet} from 'react-native'
 
-export const Navbar = props => {
+export const Navbar = ({title}) => {
     return (
-        <View style={SVGAnimatedLengthList.navbar}>
-            <Text style={styles.text}>Todo App</Text>
+        <View style={styles.navbar}>
+            <Text style={styles.text}>{title} </Text>
         </View>
     )
 }
@@ -12,9 +12,14 @@ export const Navbar = props => {
 
 const styles = StyleSheet.create ({
     navbar: {
-
+      height: 70,
+      alignItems: 'center',
+      justifyContent: 'flex-end',
+      backgroundColor: '#3949ab',
+      paddingBottom: 10
     },
     text: {
-
+        color: 'white',
+        fontSize: 20
     }
 })
